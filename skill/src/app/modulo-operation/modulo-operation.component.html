@@ -1,0 +1,14 @@
+<div class="modulo">
+    <h1>
+        Modulo
+    </h1>
+    <span class="moduloSpan" *ngFor="let number of numbers">
+        {{ number.first }} % {{ number.second }} = {{ number.first % number.second}}
+    </span>
+    <form class="addModuloForm" (ngSubmit)="moduloNumber($event)">
+        <input type="number" placeholder="First Number">
+        <input type="number" placeholder="Second Number">
+        <button type="submit">Add new modulo</button>
+    </form>
+</div>
+

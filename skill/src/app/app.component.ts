@@ -6,11 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { MultiplicationOperationComponent } from './multiplication-operation/multiplication-operation.component';
 import { DivideOperationComponent } from './divide-operation/divide-operation.component';
 import { SubstractionOperationComponent } from './substraction-operation/substraction-operation.component';
+import { ModuloOperationComponent } from './modulo-operation/modulo-operation.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, MultiplicationOperationComponent, DivideOperationComponent, SubstractionOperationComponent],
+  imports: [RouterOutlet, CommonModule, FormsModule, MultiplicationOperationComponent, DivideOperationComponent, SubstractionOperationComponent, ModuloOperationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
