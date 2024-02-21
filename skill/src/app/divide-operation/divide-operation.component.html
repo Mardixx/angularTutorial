@@ -1,0 +1,14 @@
+<div class="division">
+    <h1>
+        Division
+    </h1>
+    <span class="divisionSpan" *ngFor="let number of numbers">
+        {{ number.first }} / {{ number.second }} = {{ number.first / number.second}}
+    </span>
+    <form class="addDivisionForm" (ngSubmit)="divideNumber($event)">
+        <input type="number" placeholder="First Number">
+        <input type="number" placeholder="Second Number">
+        <button type="submit">Add new division</button>
+    </form>
+</div>
+

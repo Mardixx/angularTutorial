@@ -1,0 +1,32 @@
+.multiplication {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .multiplicationSpan {
+        display: flex;
+        flex-direction: column;
+    }
+    .addMultiplicationForm {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+        gap: 1rem; 
+        input {
+            padding: 1rem;
+            border-radius: 15px;
+        }
+        button {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 10px;
+            width: 30%;
+            background-color: #6ed1f0;
+            box-shadow: rgb(142, 142, 214) 2px 2px 5px;
+            text-shadow: rgb(142, 142, 214) 2px 2px 2px;
+            color: #000000;
+        }
+    }
+}

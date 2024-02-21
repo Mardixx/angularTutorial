@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="addition">
+    <h1>Addition</h1>
+    <span class="additionSpan" *ngFor="let number of numbers">
+      {{ number.first }} + {{ number.second }} = {{ number.first + number.second }}
+    </span>
+    <form class="addNumberForm" (ngSubmit)="addNumber($event)">
+      <input type="number" placeholder="First Number" name="first">
+      <input type="number" placeholder="Second Number">
+      <button type="submit">Add new addition</button>
+    </form>
+  </div>
+  <substraction-operation />
+  <multiplication-operation />
+  <divide-operation />
+</div>

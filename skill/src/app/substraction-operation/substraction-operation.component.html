@@ -1,0 +1,14 @@
+<div class="substraction">
+    <h1>
+        Substraction
+    </h1>
+    <span class="substractionSpan" *ngFor="let number of numbers">
+        {{ number.first }} - {{ number.second }} = {{ number.first - number.second}}
+    </span>
+    <form class="addSubstractionForm" (ngSubmit)="substractNumber($event)">
+        <input type="number" placeholder="First Number">
+        <input type="number" placeholder="Second Number">
+        <button type="submit">Add new division</button>
+    </form>
+</div>
+

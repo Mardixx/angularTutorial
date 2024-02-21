@@ -1,0 +1,13 @@
+<div class="multiplication">
+    <h1>
+        Multiplication
+    </h1>
+    <span class="multiplicationSpan" *ngFor="let number of numbers">
+        {{ number.first }} x {{ number.second }} = {{ number.first * number.second}}
+    </span>
+    <form class="addMultiplicationForm" (ngSubmit)="multiplyNumber($event)">
+        <input type="number" placeholder="First Number">
+        <input type="number" placeholder="Second Number">
+        <button type="submit">Add new multiplication</button>
+    </form>
+</div>
