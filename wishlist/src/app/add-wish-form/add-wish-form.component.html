@@ -1,0 +1,11 @@
+<form class="addWishForm">
+    <div class="addWishFormDiv">
+        <input name="new-wish-input" type="text" class="addWishFormTextInput" [(ngModel)]="newWishText"> <!--Gets what's inside the input and sets it as newWishText, name is needed for adding new wish-->
+    </div>
+    <div class="addWishFormButtonDiv">
+        <button type="submit"
+        class="addWishFormButton"
+        (click)="$event.preventDefault(); addNewWish()"
+        >Add wish</button> <!--Prevents the submit to reload page $event gets me access to preventDefault() and play the method addNewWish() set in app.component.ts-->
+    </div>
+</form>

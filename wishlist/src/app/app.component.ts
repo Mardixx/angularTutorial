@@ -2,12 +2,15 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { WishItem } from '../shared/modules/wishItem';
 import { CommonModule } from '@angular/common';
-import { log } from 'console';
+import { FormsModule } from '@angular/forms';
+import { WishListComponent } from './wish-list/wish-list.component';
+import { AddWishFormComponent } from './add-wish-form/add-wish-form.component';
+import { WishFilterComponent } from './wish-filter/wish-filter.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FormsModule, WishListComponent, AddWishFormComponent, WishFilterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -15,15 +18,10 @@ export class AppComponent {
   items : WishItem[] = [
     new WishItem('Start learning Angular', true),
     new WishItem('Get an internship'),
-    new WishItem('Find grass that cuts intself')
-  ]
-  title = 'trying to work';
+    new WishItem('Find grass that cuts itself')
+  ];
 
-  toggleItem(item : WishItem) {
-    item.isComplete = !item.isComplete;
-    console.log(item);
-    
-  }
+  filter : any = () => true
 }
 
 

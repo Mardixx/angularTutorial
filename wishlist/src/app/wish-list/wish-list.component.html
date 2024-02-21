@@ -1,0 +1,15 @@
+<div class="wishesDiv">
+    <div *ngIf="wishes.length == 0; else showItems" class="noWishesDiv"> <!--Basic If Else using ng-template in this case checks if items.length wishItem.ts used in app.component.ts is equal to 0 and if not uses template showItems-->
+        <span class="noWishes">No wishes to display.</span>
+    </div>
+
+    <ng-template #showItems> <!--Template that gets show when called in the If Else statement-->
+        <ul *ngIf="wishes.length > 0" class="wishlist">
+            <li class="wishesCheckbox" *ngFor="let item of wishes; index as ii">
+                <label class="WishesCheckboxLabel">
+                <input type="checkbox" class="checkbox" [checked]="item.isComplete" [attr.data-index]="ii" (click)="toggleItem(item)"> {{ item.wishText }} <!--data-index is linked to the index of the *ngFor loop -->
+                </label>
+            </li>
+        </ul>
+    </ng-template>
+</div>

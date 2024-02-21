@@ -1,0 +1,35 @@
+.addWishForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .addWishFormDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        .addWishFormTextInput {
+            outline: none;
+            padding: 10px;
+            font-size: 25px;
+            width: 50%;
+            height: 1vw;
+            border-radius: 15px;
+            border: 1px solid lightgrey;
+            box-shadow: 3px 3px 2px grey;
+        }
+    }
+    .addWishFormButtonDiv {
+        .addWishFormButton {
+            background-color: #459afc;
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 10px;
+            height: 2vw;
+            width: 10vw;
+            font-size: 1.5vw;
+            box-shadow: 2px 4px 3px grey;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<div class="selectDiv">
+    <select
+        class="filterSelect" 
+        [(ngModel)]="listFilter"
+        (ngModelChange)="changeFilter($event)"
+    > <!--(ngModelChange)="filterChange($event)"  not needed anymore because I set visibleItems has a get to make it so the filter is responsive--> 
+      <option value="0">All</option>
+      <option value="1">Fulfilled</option>
+      <option value="2">Unfulfilled</option>
+    </select>
+</div>
